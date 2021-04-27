@@ -50,7 +50,14 @@
                         Sector - 7 · Bhilai, PO 490006 · 7587367140 ·
                         <a href="mailto:mandal.sumit00@email.com">mandal.sumit00@gmail.com</a>
                     </div>
-                    <p class="lead mb-5">I am experienced in python and Django. I am also familiar with java , jsp and servlets .javascript and SQL doesn't scare me AnyMore .And Not to menntion I am Full Stack Web Developer.
+                    <p class="lead mb-5">
+                      I love exploring things and seek for 'WHY?'. Currently I am working on deep learning. I have worked on Data Analysis using Machine Learning. I've created bit less than half
+                       dozen dynamic website using django. A website using jsp and servlet. Prototype of self driving car using Convolutional Neural Networks, traffic sign recognizer using CNN,
+                       Lane detection Using OpenCV. I've also worked on facial detection using opencv and Deep learning. You can visit my github to see the projects.
+                       <br>
+                       <br>
+
+                      I am experienced in python and Django. I am also familiar with java , jsp and servlets .javascript and SQL doesn't scare me AnyMore .And Not to mention I am Full Stack Web Developer.
                     Recently I have finished working on self-driving car. Machine Learning and Deep Learning Excites me. </p>
                     <div class="social-icons">
                         <a class="social-icon" href="https://www.linkedin.com/in/sumit-mandal-753692130/"><i class="fab fa-linkedin-in"></i></a>
@@ -65,6 +72,16 @@
             <section class="resume-section" id="experience">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Experience</h2>
+
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Data Analytics/Machine Learning Intern</h3>
+                            <div class="subheading mb-3">Praedico Global Research</div>
+                            <p>Currently when this Website is being updated,I am Interning at praedico Global Research. My task is to Analyze data and make prediction using Machine learning models. </p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">April 2021 - August 2021</span></div>
+                    </div>
+
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Web Developer</h3>
@@ -117,7 +134,7 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0">ITM UNIVERSITY GWALIOR</h3>
                             <div class="subheading mb-3">Computer Science Engineering</div>
-                            <p>GPA: 7.00</p>
+                            <p>GPA: 7.50</p>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">June 2018 - june 2022</span></div>
                     </div>
@@ -143,24 +160,45 @@
                         <li class="list-inline-item"><i class="fab fa-grunt"></i></li>
                         <li class="list-inline-item"><i class="fab fa-npm"></i></li> -->
                     </ul>
-                    <div class="subheading mb-3">Workflow</div>
+                    <div class="subheading mb-3">Skills</div>
                     <ul class="fa-ul mb-0">
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Mobile-First, Responsive Design
+                            Machine Learning
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Browser Testing & Debugging
+                            Deep Learning
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Functional Teams
+                            CNN and ANN
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Agile Development & Scrum
+                            Django
                         </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Python
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Java
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Jsp + Servlets
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            My SQL
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            HTML + CSS
+                        </li>
+
                     </ul>
                 </div>
             </section>
@@ -198,6 +236,32 @@
 {% endfor %}
 </div>
             <hr class="m-0" />
+
+            <section class="resume-section" id="projects">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Blogs</h2>
+
+                    <div class="row">
+                    {% for blog in Blogs %}
+
+
+
+
+                    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{ item.image.url }}" alt="Card image cap">
+      <div class="card-body">
+        <a href="{{ item.get_absolute_url }}"><h5 class="card-title">{{ item.title }}</h5></a>
+        <p class="card-text">{{item.description|truncatechars:50}}</p>
+        {% if item.url %}
+        <a href="{{ item.url }}" class="btn btn-primary">Check Website</a>
+        {% endif %}
+      </div>
+    </div>
+{% endfor %}
+</div>
+            <hr class="m-0" />
+
+
 
 
 
